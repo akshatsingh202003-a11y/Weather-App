@@ -22,8 +22,8 @@ const Weather = () => {
         "01n": clear_icon,
         "02d": cloud_icon,
         "02n": cloud_icon,
-        "02d": cloud_icon,
-        "02n": cloud_icon,
+        "03d": cloud_icon,
+        "03n": cloud_icon,
         "04d": drizzle_icon,
         "04n": drizzle_icon,
         "09d": rain_icon,
@@ -69,14 +69,14 @@ const Weather = () => {
     }
 
     useEffect(()=>{
-        search("London");
+        search("Kanpur");
     },[])
 
   return (
     <div className='weather'>
         <div className="search-bar">
             <input ref={inputRef} type="text" placeholder='Search' />
-            <img src={search_icon} alt="search" style={{ width: "20px", height: "20px" }} onClick={()=>search(inputRef.current.value)}/>
+            <img src={search_icon} alt="search" style={{ width: "20px", height: "20px",cursor:"pointer" }} onClick={()=>search(inputRef.current.value)}/>
         </div>
         {weatherData?<>
 
